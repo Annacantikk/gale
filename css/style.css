@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #06A3DA;
+    --primary: #0063b9;
     --secondary: #F57E57;
     --light: #EEF9FF;
     --dark: #091E3E;
@@ -240,7 +240,7 @@ h6,
 }
 
 .offer-text {
-    background: rgba(6, 163, 218, .85);
+    background:  #0063b9;
 }
 
 .price-carousel .owl-nav {
