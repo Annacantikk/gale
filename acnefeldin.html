@@ -126,8 +126,41 @@
                         Acne Feldin mengandung sulfur yang dapat membantu membunuh bakteri penyebab jerawat.
                         <br><br>
                         Tersedia dalam kemasan botol 110 ml</p>
-                    <a href="#" class="btn buttonnew py-2 px-4 mt-3 translate-middle-y" data-wow-delay="0.6s">Beli</a>
-                </div>                   
+                    <div>
+                        <a href="#" class="btn buttonnew py-2 px-4 mt-3 translate-middle-y" data-wow-delay="0.6s">Beli</a>
+                                            <div id="accordion">
+                                                <div class="card-detail">
+                                                    <button class="collapsible"
+                                                        style="background-color: #0063b9;">Komposisi</button>
+                                                    <div class="content-produk">
+                                                        <p>
+                                                            <ol>
+                                                                <li style="color:black">Sulfur Praecipitatum</li>
+                                                                <li style="color:black">Camphor</li>
+                                                            </ol>
+                                                        </p>
+                                                    </div>
+                                                    <button class="collapsible"
+                                                        style="background-color: #0063b9;">Aturan
+                                                        Pakai</button>
+                                                    <div class="content-produk">
+                                                        <p style="color:black"><br>Bersihkan wajah dengan kapas
+                                                            pembersih
+                                                            kemudian oleskan Acne Feldin
+                                                            Lotion pada area yang
+                                                            berjerawat 2 kali sehari.</p>
+                                                    </div>
+                                                    <button class="collapsible" style="background-color: #0063b9;"">Indikasi</button>
+                                <div class=" content-produk">
+                                                        <p style="color:black"><br>Mengatasi Jerawat (Acne Vulgaris).
+                                                        </p>
+                                                </div>
+                                            </div>
+                                            </div>
+                    </div>
+                </div>         
+                
+                
                 <div class="col-lg-5" style="min-height: 500px;">
                     <div class="position-relative h-100">
                         <div class="produk-container position-absolute w-100 rounded wow zoomIn"  data-wow-delay="0.9s" style="object-fit: cover">
@@ -176,6 +209,7 @@
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
     <script src="lib/twentytwenty/jquery.event.move.js"></script>
     <script src="lib/twentytwenty/jquery.twentytwenty.js"></script>
+    
     <script>
         const container = document.querySelector('.produk-container');
         const jumbo = document.querySelector('.jumboimage');
@@ -205,6 +239,22 @@
                 eOld = e.target;
     }
 })
+    </script>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
     </script>
 
     <!-- Template Javascript -->
