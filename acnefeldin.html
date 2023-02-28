@@ -30,6 +30,34 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+    .thumbimage {
+        width: 170px;
+        float: left;
+        border: 2px solid white;
+        box-sizing: border-box;
+    }
+
+    .thumbimage:hover {
+        opacity: 0.5;
+        cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+
+    .fade {
+        opacity: 0;
+        animation: fadeIn 0.5s forwards;
+    }
+
+    .active {
+        opacity: 0.5;
+    }
+    </style>
 </head>
 
 <body>
@@ -102,7 +130,18 @@
                 </div>                   
                 <div class="col-lg-5" style="min-height: 500px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute w-100 rounded wow zoomIn" data-wow-delay="0.9s" src="img/produk/image_produk_otc_acne_feldin_01.jpg" style="object-fit: cover;">
+                        <div class="produk-container position-absolute w-100 rounded wow zoomIn"  data-wow-delay="0.9s" style="object-fit: cover">
+                            <img src="img/produk/image_produk_otc_acne_feldin_01.jpg" class="jumboimage">
+                            <div class="produk-thumbnail">
+                                <img src="img/produk/image_produk_otc_acne_feldin_01.jpg" class="thumbimage">
+                            </div>
+                            <div class="produk-thumbnail">
+                                <img src="img/produk/image_produk_otc_acne_feldin_01.jpg" class="thumbimage">
+                            </div>
+                            <div class="produk-thumbnail">
+                                <img src="img/produk/image_produk_otc_acne_feldin_01.jpg" class="thumbimage">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -137,6 +176,36 @@
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
     <script src="lib/twentytwenty/jquery.event.move.js"></script>
     <script src="lib/twentytwenty/jquery.twentytwenty.js"></script>
+    <script>
+        const container = document.querySelector('.produk-container');
+        const jumbo = document.querySelector('.jumboimage');
+        //const thumbs = document.querySelector('.thumb');
+        let eOld = null;
+
+        container.addEventListener('click', function(e){
+            if (e.target.className == 'thumbimage'){
+                if (eOld != null) {
+                    eOld.classList.remove('active')
+                }
+                jumbo.src = e.target.src;
+                jumbo.classList.add('fade');
+                setTimeout(function(){
+                    jumbo.classList.remove('fade')
+                }, 500);
+
+                // thumbs.forEach(function(thumb){
+                //     // if (thumb.classList.contains('active')){
+                //     //     thumb.classList.remove('active')
+                //     // }
+                //     thumb.className = 'thumb';
+
+                // });
+
+                e.target.classList.add('active');
+                eOld = e.target;
+    }
+})
+    </script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
