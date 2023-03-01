@@ -481,3 +481,9 @@ h6,
     transition: max-height 0.2s ease-out;
     background-color: #f1f1f1;
     }
+
+    .img-bgnew {
+        background-image: url(../img/bg/img\ \(5\).jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
