@@ -235,7 +235,7 @@ h6,
 }
 
 .bg-offer {
-    background:url(../img/slide2.jpg) center center no-repeat;
+    background:url(../img/bg/1.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -280,7 +280,7 @@ h6,
 }
 
 .bg-testimonial {
-    background: url(../img/slide6_2.jpg) center center no-repeat;
+    background: url(../img/bg/15.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -482,8 +482,8 @@ h6,
     background-color: #f1f1f1;
     }
 
-    .img-bgnew {
-        background-image: url(../img/bg/img\ \(5\).jpg);
+    .img-bgberkarir {
+        background: url(../img/bg/6.jpg) center center no-repeat;
         background-repeat: no-repeat;
         background-size: cover;
     }
