@@ -279,10 +279,10 @@ h6,
     background: var(--secondary);
 }
 
-.bg-testimonial {
+/* .bg-testimonial {
     background: url(../img/bg/15.jpg) center center no-repeat;
     background-size: cover;
-}
+} */
 
 
 .testimonial-carousel .owl-nav {
@@ -483,7 +483,8 @@ h6,
     }
 
     .img-bgberkarir {
-        background: url(../img/bg/1.jpg) center center no-repeat;
-        back1round-repeat: no-repeat;
+        background: url(../img/bgnew/8.png) center center no-repeat;
         background-size: cover;
-    }
+        background-position: center;
+        background-repeat: no-repeat;
+    }   
